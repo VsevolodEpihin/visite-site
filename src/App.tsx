@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import Hero from "./components/Hero";
 import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
@@ -11,11 +11,11 @@ function App() {
   const gameRef = useRef<HTMLDivElement>(null);
   return (
     <div className="App">
+      <Hero />
+      <TechStack />
       <ScrollToGame
         onClick={() => gameRef.current?.scrollIntoView({ behavior: "smooth" })}
       />
-      <Hero />
-      <TechStack />
       <Projects />
       <CodeShowcase />
       <div ref={gameRef}>

@@ -23,6 +23,10 @@ const technologies = [
   "react-testing-library",
 ];
 
+const half = Math.ceil(technologies.length / 2);
+const topRow = technologies.slice(0, half);
+const bottomRow = technologies.slice(half);
+
 const TechStack: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -46,12 +50,21 @@ const TechStack: React.FC = () => {
       }`}
     >
       <h2>Технологии</h2>
-      <div className="techstack-list">
-        {technologies.map((tech) => (
-          <span className="techstack-item" key={tech}>
-            {tech}
-          </span>
-        ))}
+      <div className="techstack-marquee-wrapper">
+        <div className="techstack-marquee techstack-marquee-right">
+          {[...topRow, ...topRow].map((tech, i) => (
+            <span className="techstack-item" key={"top-" + i + tech}>
+              {tech}
+            </span>
+          ))}
+        </div>
+        <div className="techstack-marquee techstack-marquee-left">
+          {[...bottomRow, ...bottomRow].map((tech, i) => (
+            <span className="techstack-item" key={"bot-" + i + tech}>
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );
