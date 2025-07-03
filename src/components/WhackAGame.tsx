@@ -87,7 +87,6 @@ const WhackAGame: React.FC = () => {
 
   return (
     <>
-    <h2>Устали от всех этих резюме?</h2>
     <div className="whacka-container">
       <h2>Успей погладить питомца!</h2>
       <div className="whacka-score">Счет: {score}</div>

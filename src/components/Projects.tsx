@@ -3,6 +3,8 @@ import React, { useEffect, useRef, useState } from "react";
 type Project = {
   title: string;
   team: string;
+  duration: string;
+  role: string;
   duties: string | string[];
   achievements: string | string[];
   stack: string;
@@ -12,6 +14,8 @@ const projects: Project[] = [
   {
     title: "РНКБ — Дистанционное банковское обслуживание",
     team: "2 Frontend, 3 Backend, 1 тестировщик, 2 аналитика, Team-Lead",
+    role: "Frontend-разработчик",
+    duration: "06.2024 – 07.2025",
     duties: [
       "Автоматизация CI/CD приложения",
       "Адаптив макетов для корректного отображения как на десктопах, так и на мобильных устройствах при помощи media-query.",
@@ -32,6 +36,8 @@ const projects: Project[] = [
   {
     title: "Finiche — Финансовый проект для поиска акций",
     team: "3 Frontend-разработчика, 2 Backend-разработчика, 2 тестировщика, 2 системных аналитика, Team-Lead",
+    role: "Frontend-разработчик",
+    duration: "03.2023 – 06.2024",
     duties: [
       "Работа по Agile и Scrum, написание тестов при помощи Jest",
       "Создание составляющих компонентов и логики виджетов при помощи React компонентов",
@@ -52,6 +58,8 @@ const projects: Project[] = [
   {
     title: "Под NDA(биржа криптовалют) — Сервис для алгоритмической торговли на рынках криптовалютных бирж",
     team: "2 Frontend-разработчика, 2 Backend-разработчика, 1 full-stack разработчик, 2 тестировщика, 1 системный аналитик, Team-Lead",
+    role: "Frontend-разработчик",
+    duration: "01.2022 – 03.2023",
     duties: [
       "Внедрение системы уведомлений на основе технологии socket.io",
       "Работа над реализацией сложных SVG анимаций, визуализацией торговых ботов при помощи Animate.css и Sass",
@@ -115,6 +123,12 @@ const Projects: React.FC = () => {
             <h3>{p.title}</h3>
             <p>
               <strong>Команда:</strong> {p.team}
+            </p>
+            <p>
+              <strong>Роль:</strong> {renderListOrText(p.role)}
+            </p>
+            <p>
+              <strong>Длительность:</strong> {renderListOrText(p.duration)}
             </p>
             <p>
               <strong>Обязанности:</strong> {renderListOrText(p.duties)}

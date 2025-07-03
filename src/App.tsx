@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import CodeShowcase from "./components/CodeShowcase";
 import WhackAGame from "./components/WhackAGame";
 import ScrollToGame from "./components/ScrollToGame";
+import ScrollToUp from "./components/ScrollToUp";
 
 function App() {
   const gameRef = useRef<HTMLDivElement>(null);
@@ -17,10 +18,11 @@ function App() {
         onClick={() => gameRef.current?.scrollIntoView({ behavior: "smooth" })}
       />
       <Projects />
-      <CodeShowcase />
+      {/* <CodeShowcase /> */}
       <div ref={gameRef}>
         <WhackAGame />
       </div>
+      <ScrollToUp />
     </div>
   );
 }
