@@ -1,0 +1,40 @@
+.scroll-to-game-container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 18px;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s;
+}
+
+.scroll-to-game-circle {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0eafc;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(58, 91, 160, 0.08);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+}
+
+.scroll-to-game-container:hover .scroll-to-game-circle {
+  background: #65b7f6;
+  box-shadow: 0 4px 16px rgba(101, 183, 246, 0.18);
+  transform: translateY(2px) scale(1.08);
+}
+
+.scroll-to-game-text {
+  font-size: 1.08rem;
+  color: #3a5ba0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.scroll-to-game-container:hover .scroll-to-game-text {
+  color: #222;
+}

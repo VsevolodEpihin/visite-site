@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useRef } from "react";
+import Hero from "./components/Hero";
+import TechStack from "./components/TechStack";
+import Projects from "./components/Projects";
+import CodeShowcase from "./components/CodeShowcase";
+import WhackAGame from "./components/WhackAGame";
+import ScrollToGame from "./components/ScrollToGame";
 
 function App() {
+  const gameRef = useRef<HTMLDivElement>(null);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ScrollToGame
+        onClick={() => gameRef.current?.scrollIntoView({ behavior: "smooth" })}
+      />
+      <Hero />
+      <TechStack />
+      <Projects />
+      <CodeShowcase />
+      <div ref={gameRef}>
+        <WhackAGame />
+      </div>
     </div>
   );
 }
