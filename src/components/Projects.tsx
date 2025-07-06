@@ -29,6 +29,7 @@ const projects: Project[] = [
       "Реализовал основные микрофронты отвечающие за подбор кредитных и ипотечных услуг",
       "Оптимизировал рендер, виртуализацию (react-window), тестирование (70%). ",
       "Настроил CI/CD.",
+      "Добавил универсальное решение для обработки ошибок и отображения уведомлений с помощью Error Boundary и Snackbar, что упростило отладку и улучшило UX."
     ],
     stack:
       "React, TypeScript, Redux, GraphQL, Apollo, MUI, Webpack, Less, react-testing-library",
@@ -72,6 +73,7 @@ const projects: Project[] = [
       "Реализация хука useDataRequest для определения типа запроса(https/websocket)",
       "Настройка Docker-compose",
       "настройка SEO-Оптимизации, доступности и работы скринридеров при помощи атрибутов, семантики и Lightehouse",
+      "Интегрировал глобальный state-менеджмент на основе Zustand, обеспечив стабильную работу с real-time данными и упростив логику взаимодействия между компонентами."
     ],
     stack: "JavaScript, React 18, Sass, Ant Design, Zustand, Socket.io, Animate.css, Docker",
   },
