@@ -3,7 +3,6 @@ import { useRef } from "react";
 import Hero from "./components/Hero";
 import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
-import CodeShowcase from "./components/CodeShowcase";
 import WhackAGame from "./components/WhackAGame";
 import ScrollToGame from "./components/ScrollToGame";
 import ScrollToUp from "./components/ScrollToUp";
