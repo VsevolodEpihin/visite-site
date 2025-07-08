@@ -1,4 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Prism from "prismjs";
+
+import "prismjs/themes/prism-tomorrow.css";
+import "prismjs/components/prism-typescript";
+import "prismjs/components/prism-javascript";
+
 import "./CodeAccordion.css";
 
 const cases = [
@@ -255,6 +261,10 @@ export function useTransport<TPayload, TResponse>(
 const CodeAccordion: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  useEffect(() => {
+    Prism.highlightAll();
+  }, [openIndex]);
+
   const handleToggle = (idx: number) => {
     setOpenIndex(openIndex === idx ? null : idx);
   };
@@ -286,7 +296,7 @@ const CodeAccordion: React.FC = () => {
               style={{ maxHeight: openIndex === idx ? 320 : 0 }}
             >
               <pre>
-                <code>{item.code}</code>
+                <code className="language-typescript">{item.code}</code>
               </pre>
             </div>
           </div>
