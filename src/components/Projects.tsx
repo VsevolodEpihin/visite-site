@@ -115,6 +115,7 @@ const Projects: React.FC = () => {
 
   return (
     <section
+      id="projects"
       ref={ref}
       className={`section-animate${visible ? " visible" : ""}`}
     >
@@ -128,16 +129,13 @@ const Projects: React.FC = () => {
           >
             <h3>{p.title}</h3>
             <p>
-              <strong>Команда:</strong> {p.team}
+              {renderListOrText(p.description)}
             </p>
             <p>
               <strong>Роль:</strong> {renderListOrText(p.role)}
             </p>
             <p>
               <strong>Длительность:</strong> {renderListOrText(p.duration)}
-            </p>
-            <p>
-              <strong>Описание проекта:</strong> {renderListOrText(p.description)}
             </p>
             <p>
               <strong>Обязанности:</strong> {renderListOrText(p.duties)}
@@ -147,6 +145,9 @@ const Projects: React.FC = () => {
             </p>
             <p>
               <strong>Стек:</strong> {p.stack}
+            </p>
+            <p>
+              <strong>Команда:</strong> {p.team}
             </p>
           </div>
         ))}

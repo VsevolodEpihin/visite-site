@@ -29,6 +29,7 @@ const Hero: React.FC = () => {
 
   return (
     <section
+      id="about"
       ref={ref}
       className={`hero-section section-animate${visible ? " visible" : ""}`}
     >

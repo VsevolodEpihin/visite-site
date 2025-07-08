@@ -44,6 +44,7 @@ const TechStack: React.FC = () => {
 
   return (
     <section
+      id="tech"
       ref={ref}
       className={`techstack-section section-animate${
         visible ? " visible" : ""
