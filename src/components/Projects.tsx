@@ -87,7 +87,7 @@ const renderListOrText = (data: string | string[]) => {
     return (
       <ul style={{ margin: "8px 0 8px 18px", padding: 0 }}>
         {data.map((item, idx) => (
-          <li key={idx} style={{ marginBottom: 4 }}>
+          <li className="item-project" key={idx} style={{ marginBottom: 4 }}>
             {item}
           </li>
         ))}
@@ -121,33 +121,35 @@ const Projects: React.FC = () => {
       <h2>Проекты</h2>
       <div className="projects">
         {projects.map((p, i) => (
-          <div
-            className="project-card"
+          <div className="project-card-container">
+            <div
+            className="project-card-outer"
             key={i}
             style={{ transitionDelay: visible ? `${0.2 + i * 0.15}s` : "0s" }}
-          >
-            <h3>{p.title}</h3>
-            <p>
-              {renderListOrText(p.description)}
-            </p>
-            <p>
-              <strong>Роль:</strong> {renderListOrText(p.role)}
-            </p>
-            <p>
-              <strong>Длительность:</strong> {renderListOrText(p.duration)}
-            </p>
-            <p>
-              <strong>Обязанности:</strong> {renderListOrText(p.duties)}
-            </p>
-            <p>
-              <strong>Достижения:</strong> {renderListOrText(p.achievements)}
-            </p>
-            <p>
-              <strong>Стек:</strong> {p.stack}
-            </p>
-            <p>
-              <strong>Команда:</strong> {p.team}
-            </p>
+            >
+              <h3>{p.title}</h3>
+              <p>
+                {renderListOrText(p.description)}
+              </p>
+              <p>
+                <strong>Роль:</strong> {renderListOrText(p.role)}
+              </p>
+              <p>
+                <strong>Длительность:</strong> {renderListOrText(p.duration)}
+              </p>
+              <p>
+                <strong>Обязанности:</strong> {renderListOrText(p.duties)}
+              </p>
+              <p>
+                <strong>Достижения:</strong> {renderListOrText(p.achievements)}
+              </p>
+              <p>
+                <strong>Стек:</strong> {p.stack}
+              </p>
+              <p>
+                <strong>Команда:</strong> {p.team}
+              </p>
+            </div>
           </div>
         ))}
       </div>

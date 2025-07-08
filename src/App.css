@@ -85,14 +85,18 @@ section h2 {
 }
 
 @media (max-width: 920px) {
-  .project-card h3 {
+  .project-card-outer h3 {
     margin-top: 0;
     color: #3a5ba0;
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
   
-  .project-card p {
+  .project-card-outer p {
+    margin: 8px 0;
+    font-size: .8rem;
+  }
+  .item-project {
     margin: 8px 0;
     font-size: .8rem;
   }
@@ -197,6 +201,37 @@ section h2 {
 .section-animate.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.project-card-outer {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(58, 91, 160, 0.18), 0 1.5px 8px rgba(58, 91, 160, 0.10);
+  padding: 22px 22px 16px 22px;
+  margin: 14px 0;
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 0.22s, transform 0.18s;
+}
+
+.project-card-container {
+  background: rgba(181, 195, 243, 0.483);
+  border-radius: 18px;
+  padding: 14px 22px 14px 22px;
+}
+
+#tech,
+#projects,
+#gists {
+  scroll-margin-top: 70px; /* высота твоей шапки + небольшой запас */
+}
+
+@media (max-width: 640px) {
+  .project-card-outer {
+    padding: 10px 6px 8px 6px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
 }
 
 @media(max-width: 520px) {
