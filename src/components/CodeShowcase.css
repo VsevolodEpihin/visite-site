@@ -88,3 +88,35 @@ code {
   font-size: 1rem;
   line-height: 1.5;
 }
+
+@media (max-width: 640px) {
+  .code-showcase-section {
+    margin: 16px 0 0 0;
+    padding: 14px 0 10px 0;
+    border-radius: 10px;
+    max-width: 100%;
+  }
+  .code-showcase-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .code-showcase-list {
+    gap: 10px;
+  }
+  .code-block {
+    width: 100%;
+    min-width: unset;
+    max-width: 100%;
+    padding: 10px 6px 8px 6px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+  }
+  .code-title {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  pre {
+    font-size: 0.95rem;
+    max-height: 180px;
+  }
+}

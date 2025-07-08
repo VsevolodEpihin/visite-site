@@ -2,7 +2,7 @@ const ScrollToUp = () => {
   return(
     <div
         className="scroll-to-top-container"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        onClick={() => window.scrollTo({ top: 800, behavior: "smooth" })}
         style={{
           position: "fixed",
           bottom: "40px",

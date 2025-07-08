@@ -65,3 +65,25 @@
   box-shadow: 0 4px 16px rgba(101, 183, 246, 0.18);
   transform: translateY(2px) scale(1.08);
 }
+
+@media (max-width: 640px) {
+  .scroll-to-game-container {
+    gap: 6px;
+    margin: 8px;
+  }
+  .scroll-to-game-circle {
+    width: 32px;
+    height: 32px;
+  }
+  .scroll-to-game-text {
+    font-size: 0.95rem;
+  }
+  .scroll-to-top-container {
+    bottom: 16px !important;
+    right: 16px !important;
+  }
+  .scroll-to-top-circle {
+    width: 32px;
+    height: 32px;
+  }
+}

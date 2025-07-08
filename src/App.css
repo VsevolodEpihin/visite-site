@@ -44,10 +44,10 @@ section h2 {
 
 .project-card {
   background: linear-gradient(120deg, #f7fafd 0%, #e3eaf6 100%);
+  min-width: 100%;
   border-radius: 18px;
   box-shadow: 0 4px 16px rgba(58, 91, 160, 0.08);
   padding: 24px 20px;
-  min-width: 600px;
   max-width: 860px;
   flex: 1 1 260px;
   color: #222;
@@ -83,6 +83,21 @@ section h2 {
   margin: 8px 0;
   font-size: 1rem;
 }
+
+@media (max-width: 920px) {
+  .project-card h3 {
+    margin-top: 0;
+    color: #3a5ba0;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .project-card p {
+    margin: 8px 0;
+    font-size: .8rem;
+  }
+}
+
 
 @keyframes fadeInApp {
   from {
@@ -182,4 +197,10 @@ section h2 {
 .section-animate.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media(max-width: 520px) {
+  .section-animate h2{
+    font-size: 1.5rem;
+  }
 }

@@ -86,3 +86,31 @@
   color: #3a5ba0;
   border: 1.5px solid #3a5ba0;
 }
+
+@media (max-width: 640px) {
+  .techstack-section {
+    margin: 16px 0 0 0;
+    padding: 16px 0 12px 0;
+    background: linear-gradient(120deg, #e0eafc 0%, #f7fafd 100%);
+    border-radius: 9px;
+    box-shadow: 0 4px 24px rgba(58, 91, 160, 0.08);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInApp 1.2s cubic-bezier(0.77, 0, 0.18, 1) both;
+  }
+  .techstack-section h2{
+    margin: 0 0 0 0;
+    padding: 8px 0 6px 0;
+    border-radius: 9px;
+    font-size: 1.2rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInApp 1.2s cubic-bezier(0.77, 0, 0.18, 1) both;
+  }
+  .techstack-item {
+    padding: 0.8rem;
+    font-size: 0.6rem;
+  }
+}

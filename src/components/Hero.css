@@ -230,7 +230,7 @@
   transition: all 0.2s ease;
   position: relative;
   user-select: none;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -249,7 +249,7 @@
   right: -140px;
   top: 50%;
   transform: translateY(-50%);
-  background: #4CAF50;
+  background: #4caf50;
   color: white;
   padding: 4px 8px;
   border-radius: 6px;
@@ -272,38 +272,153 @@
 }
 
 /* Адаптивность для мобильных устройств */
+@media (max-width: 920px) {
+  .hero-info h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  .hero-info p {
+    font-size: 0.8rem;
+  }
+  .hero-photo img {
+    width: 300px;
+    height: 300px;
+  }
+  .hero-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    padding: 6px 3px 5px 3px;
+    margin-top: 18px;
+  }
+  .hero-contacts-list {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+  .hero-contacts {
+    justify-content: center;
+    font-size: 1rem;
+    padding: 0px 0px;
+  }
+  .contact-item {
+    flex-direction: column;
+    align-items: start;
+    gap: 0px;
+    width: 80%;
+    padding: 5px;
+    margin: 5px;
+  }
+  .contact-item a,span {
+    font-size: 0.8rem;
+  }
+  .contact-value {
+    font-size: 0.8rem;
+  }
+  .contact-label {
+    min-width: auto;
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-section {
     flex-direction: column;
     text-align: center;
     padding: 24px 20px;
   }
-  
+
   .hero-info {
     flex: 1 1 100%;
     text-align: center;
   }
-  
+
   .hero-photo {
     flex: 1 1 100%;
     justify-content: center;
   }
-  
+
   .hero-photo img {
     width: 250px;
     height: 250px;
   }
-  
+
   .contact-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
   }
-  
+
   .contact-label {
     min-width: auto;
   }
-  
+
+  .copy-indicator {
+    position: static;
+    transform: none;
+    margin-top: 4px;
+    right: auto;
+    top: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px 6px;
+    gap: 18px;
+    min-height: unset;
+  }
+  .hero-info {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .hero-info h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  .hero-info p {
+    font-size: 1rem;
+  }
+  .hero-photo {
+    flex: 1 1 100%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .hero-photo img {
+    width: 140px;
+    height: 140px;
+  }
+  .hero-contacts {
+    display: block;
+    width: 90%;
+    background-color: transparent;
+    padding: 6px 3px 5px 3px;
+    margin-top: 18px;
+  }
+  .hero-contacts-list {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .hero-contact {
+    justify-content: center;
+    font-size: 1rem;
+    padding: 7px 10px;
+  }
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100%;
+  }
+  .contact-label {
+    min-width: auto;
+    font-size: 0.9rem;
+  }
   .copy-indicator {
     position: static;
     transform: none;
