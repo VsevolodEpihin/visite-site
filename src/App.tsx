@@ -21,7 +21,7 @@ function App() {
         onClick={() => gameRef.current?.scrollIntoView({ behavior: "smooth" })}
       />
       <Projects />
-      <CodeAccordion />
+      <CodeAccordion /> 
       <div ref={gameRef}>
         <WhackAGame />
       </div>
