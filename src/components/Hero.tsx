@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
     if (ref.current) observer.observe(ref.current);
     return () => {
       if (ref.current) observer.unobserve(ref.current);
-    };
+    }; 
   }, []);
 
   const copyToClipboard = async (text: string, contactType: string) => {
