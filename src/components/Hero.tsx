@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
             <span className="contact-label">Telegram:</span>
             <a
               className="contact-value"
-              href="https://t.me/zzzsevazzz"
+              href="https://t.me/seva_epihin"
               target="_blank"
               rel="noopener noreferrer"
               title="Открыть Telegram"
