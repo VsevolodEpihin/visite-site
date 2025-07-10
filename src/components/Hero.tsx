@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
               title="Открыть Telegram"
               style={{ textDecoration: "none" }}
             >
-              @zzzsevazzz
+              @seva_epihin
             </a>
           </div>
 
